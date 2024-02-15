@@ -1,5 +1,8 @@
 pipeline{
-    agent any
+    agent {
+        label 'nodejs_slave1'
+    }
+
     tools {nodejs "Node"}
     stages {
         stage('Clone Repository'){
