@@ -22,7 +22,7 @@ app.get('/',  (req, res) => {
 	res.send('Hello World!');
   })
 app.get('/testgetrequest',  (req, res) => {
-	res.send('Hello World!');
+	res.send('Bonjour le monde!');
   })
 app.get('/testwithheader', auth,  (req, res) => {
   res.send('Hello World! with header');
