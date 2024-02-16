@@ -19,17 +19,17 @@ const auth = (req,res,  next) => {
 	next();
 }
 app.get('/',  (req, res) => {
-	res.send('Bonjour le monde!');
+	res.send('hola palabra!');
   })
 app.get('/testgetrequest',  (req, res) => {
-	res.send('Bonjour le monde!');
+	res.send('hola palabra!');
   })
 app.get('/testwithheader', auth,  (req, res) => {
-  res.send('Bonjour le monde! with header');
+  res.send('hola palabra! with header');
 })
 app.post('/testwithheader', auth ,jsonParser,  (req, res) => {
 	//console.log(req.body);
-	res.send('Hello World! with header n body'+req.body.name);
+	res.send('hola palabra! with header n body'+req.body.name);
 })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
