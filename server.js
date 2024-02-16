@@ -19,13 +19,13 @@ const auth = (req,res,  next) => {
 	next();
 }
 app.get('/',  (req, res) => {
-	res.send('Hello World!');
+	res.send('Bonjour le monde!');
   })
 app.get('/testgetrequest',  (req, res) => {
 	res.send('Bonjour le monde!');
   })
 app.get('/testwithheader', auth,  (req, res) => {
-  res.send('Hello World! with header');
+  res.send('Bonjour le monde! with header');
 })
 app.post('/testwithheader', auth ,jsonParser,  (req, res) => {
 	//console.log(req.body);
